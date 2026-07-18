@@ -3,85 +3,283 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Olga — скоро открытие</title>
-<meta name="description" content="Сайт в разработке. Скоро здесь будет что-то интересное.">
-<style>
-  :root {
-    --bg: #0f1115;
-    --fg: #f2f3f5;
-    --muted: #9aa1ad;
-    --accent: #c9a227;
-  }
-  @media (prefers-color-scheme: light) {
-    :root {
-      --bg: #faf9f7;
-      --fg: #1a1c20;
-      --muted: #6b7280;
-      --accent: #a9861a;
-    }
-  }
-  * { box-sizing: border-box; }
-  html, body { height: 100%; margin: 0; }
-  body {
-    background: var(--bg);
-    color: var(--fg);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    text-align: center;
-  }
-  main { max-width: 560px; }
-  .mark {
-    width: 64px; height: 64px;
-    margin: 0 auto 28px;
-    border: 2px solid var(--accent);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 26px; font-weight: 600; letter-spacing: 1px;
-    color: var(--accent);
-  }
-  h1 {
-    font-size: clamp(28px, 6vw, 44px);
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    margin: 0 0 16px;
-  }
-  p {
-    color: var(--muted);
-    font-size: clamp(15px, 2.4vw, 18px);
-    line-height: 1.6;
-    margin: 0 0 32px;
-  }
-  .divider {
-    width: 48px; height: 2px;
-    background: var(--accent);
-    margin: 0 auto 32px;
-    opacity: .7;
-  }
-  a {
-    color: var(--fg);
-    text-decoration: none;
-    border-bottom: 1px solid var(--accent);
-    padding-bottom: 2px;
-  }
-  a:hover { color: var(--accent); }
-  footer {
-    margin-top: 40px;
-    font-size: 13px;
-    color: var(--muted);
-  }
-</style>
+<title>Про НРЛ — нарциссическое расстройство личности простым языком</title>
+<meta name="description" content="Просветительский материал о нарциссическом расстройстве личности: как оно формируется, чем отличается от усвоенных защит, какие манипуляции применяются и как выстроить границы. Не инструмент диагностики.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23e0ff82'/><text y='72' x='50' text-anchor='middle' font-size='58' font-family='sans-serif' font-weight='700' fill='%231d2020'>Н</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<main>
-  <div class="mark">O</div>
-  <h1>Скоро открытие</h1>
-  <div class="divider"></div>
-  <p>Сайт находится в разработке. Загляните чуть позже — здесь появится всё самое интересное.</p>
-  <p><a href="mailto:skrylkovs@gmail.com">Связаться</a></p>
-  <footer>&copy; 2026</footer>
+<a href="#main" class="sr-only">К содержанию</a>
+
+<header class="site-header">
+  <div class="bar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">Н</span>
+      Про НРЛ
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="chto-takoe-nrl.html">Что такое НРЛ</a>
+      <a href="nrl-i-travma.html">НРЛ и травма</a>
+      <a href="mozg.html">Мозг</a>
+      <a href="empat-i-narciss.html">Эмпат и нарцисс</a>
+      <a href="manipulyacii.html">Манипуляции</a>
+      <a href="zashchita.html">Защита</a>
+    </nav>
+    <div class="header-actions">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" onclick="var n=document.getElementById('mobile-nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">Меню</button>
+      <a href="kak-sohranit-energiyu.html" class="btn btn-primary" style="white-space:nowrap">Как себе помочь</a>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="chto-takoe-nrl.html">Что такое НРЛ</a></li>
+      <li><a href="nrl-i-travma.html">НРЛ и нарциссическая травма</a></li>
+      <li><a href="mozg.html">Мозг при НРЛ</a></li>
+      <li><a href="empat-i-narciss.html">Эмпат и нарцисс</a></li>
+      <li><a href="kak-sohranit-energiyu.html">Как сохранить энергию</a></li>
+      <li><a href="manipulyacii.html">Манипуляции</a></li>
+      <li><a href="zashchita.html">Как оградить себя</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container">
+
+    <section class="section" style="position:relative">
+      <div class="dot-grid" style="position:absolute;inset:0 0 auto;height:600px" aria-hidden="true"></div>
+      <div class="split" style="position:relative">
+        <div>
+          <a href="#razdely" class="badge-link">
+            <span class="pill">7 разделов</span>
+            <span class="small">От устройства расстройства до конкретных фраз</span>
+            <svg style="width:16px;height:16px;flex-shrink:0" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" />
+            </svg>
+          </a>
+          <h1 class="display mt-6">Рядом с ним<br> вы постоянно<br> <span class="marker">виноваты</span></h1>
+          <p class="lead mt-6" style="max-width:36rem">Разбор нарциссического расстройства личности без ярлыков и мистики: как оно устроено, почему на него так тянет чувствительных людей, какими приёмами вас додавливают и что конкретно с этим делать.</p>
+          <div class="mt-8" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+            <a href="chto-takoe-nrl.html" class="btn btn-primary">С чего начать</a>
+            <a href="#razdely" class="btn btn-secondary">Все разделы</a>
+          </div>
+          <p class="caption muted-soft mt-4">Просветительский материал · не ставит диагнозы · не заменяет консультацию специалиста</p>
+        </div>
+
+        <div style="margin-inline:auto;width:100%;max-width:540px;overflow:hidden;border-radius:24px;border:1px solid var(--line);background:var(--surface);box-shadow:var(--shadow-lift)">
+          <div style="position:relative;display:flex;height:44px;align-items:center;border-bottom:1px solid var(--line);padding-inline:16px">
+            <div style="display:flex;align-items:center;gap:6px">
+              <span style="width:10px;height:10px;border-radius:50%;background:var(--danger)" aria-hidden="true"></span>
+              <span style="width:10px;height:10px;border-radius:50%;background:var(--accent-strong)" aria-hidden="true"></span>
+              <span style="width:10px;height:10px;border-radius:50%;background:var(--info)" aria-hidden="true"></span>
+            </div>
+            <span class="caption muted" style="position:absolute;inset-inline:0;text-align:center;pointer-events:none">Что вы узнаете</span>
+          </div>
+          <div style="padding:24px">
+            <ul class="check-list">
+              <li class="small">Чем расстройство личности отличается от скверного характера</li>
+              <li class="small">Почему за грандиозностью почти всегда стоит хрупкая самооценка</li>
+              <li class="small">Как отличить НРЛ от защит, усвоенных рядом с таким человеком</li>
+              <li class="small">Что на самом деле показали МРТ‑исследования — и чего они не показали</li>
+              <li class="small">Откуда берётся «комплекс спасателя» и почему он так дорого обходится</li>
+              <li class="small">Какие приёмы применяются и что отвечать вместо оправданий</li>
+            </ul>
+            <div class="callout-accent mt-6">
+              <p class="small"><strong>Главное правило чтения:</strong> ищите здесь не диагноз человеку, а язык для того, что происходит с вами.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="callout-warn">
+        <h2 class="h3">Этот сайт не ставит диагнозы</h2>
+        <p class="small mt-3">Нарциссическое расстройство личности диагностирует только врач‑психиатр или клинический психолог, очно и не за одну встречу. Ни статья, ни тест в интернете этого не могут — ни в отношении вас, ни тем более в отношении вашего партнёра, родителя или коллеги.</p>
+        <p class="small mt-3">Ярлык «нарцисс», повешенный на близкого, обычно не улучшает отношения, а закрывает разговор. Куда полезнее другой вопрос: <strong>что конкретно происходит между вами и что вы чувствуете после общения</strong>. Именно на него отвечают эти семь разделов.</p>
+      </div>
+    </section>
+
+    <section id="razdely" class="section scroll-anchor">
+      <div class="card">
+        <p class="eyebrow">Разделы</p>
+        <h2 class="h2 mt-3">Семь шагов: от теории к конкретным фразам</h2>
+        <p class="lead mt-4" style="max-width:44rem">Разделы выстроены по порядку — каждый следующий опирается на предыдущий. Но можно начать и с того, что болит прямо сейчас.</p>
+        <ol class="toc mt-9">
+          <li><a href="chto-takoe-nrl.html">
+            <div>
+              <p class="body ink-strong" style="font-weight:500">Что такое НРЛ</p>
+              <p class="small muted mt-2">Определение, критерии, два подтипа. Как формируется: темперамент, среда, детский опыт обесценивания и условной любви.</p>
+            </div>
+          </a></li>
+          <li><a href="nrl-i-travma.html">
+            <div>
+              <p class="body ink-strong" style="font-weight:500">Как отличить НРЛ от нарциссической травмы</p>
+              <p class="small muted mt-2">Усвоенные защиты — не расстройство. Они появляются как способ выжить рядом с нарциссичным родителем, обратимы и поддаются терапии.</p>
+            </div>
+          </a></li>
+          <li><a href="mozg.html">
+            <div>
+              <p class="body ink-strong" style="font-weight:500">Мозг при НРЛ и мозг человека с травмой</p>
+              <p class="small muted mt-2">Что показали МРТ‑исследования про объём серого вещества, чем объём отличается от активности и почему это не диагностический инструмент.</p>
+            </div>
+          </a></li>
+          <li><a href="empat-i-narciss.html">
+            <div>
+              <p class="body ink-strong" style="font-weight:500">Эмпат и нарцисс</p>
+              <p class="small muted mt-2">Как формируется эмпатия и чем здоровая чувствительность отличается от «эмпатии выживания» ребёнка, обслуживавшего настроение взрослых.</p>
+            </div>
+          </a></li>
+          <li><a href="kak-sohranit-energiyu.html">
+            <div>
+              <p class="body ink-strong" style="font-weight:500">Как уберечь себя и свою энергию</p>
+              <p class="small muted mt-2">Комплекс спасателя, треугольник Карпмана и то, почему «то тепло, то холод» привязывает сильнее ровного хорошего отношения.</p>
+            </div>
+          </a></li>
+          <li><a href="manipulyacii.html">
+            <div>
+              <p class="body ink-strong" style="font-weight:500">Основные манипуляции</p>
+              <p class="small muted mt-2">Лавбомбинг, газлайтинг, давление на жалость, эффект якоря, холодный и горячий душ — как выглядят в репликах и что за ними стоит.</p>
+            </div>
+          </a></li>
+          <li><a href="zashchita.html">
+            <div>
+              <p class="body ink-strong" style="font-weight:500">Как оградить себя от манипуляций</p>
+              <p class="small muted mt-2">Метод серого камня и его цена, границы, нейтральная реакция, правило «не оправдываться» — с готовыми формулировками.</p>
+            </div>
+          </a></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <p class="eyebrow">Кому это может быть полезно</p>
+        <h2 class="h2 mt-3">Если что‑то из этого про вас</h2>
+        <ul class="feature-list cols-3 mt-9">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-9.5A3.5 3.5 0 0 1 12 9a3.5 3.5 0 0 1 7 2.5C19 16.6 12 21 12 21Z"/></svg>
+            <div>
+              <p class="body ink-strong" style="font-weight:500">Вы узнаёте свои отношения</p>
+              <p class="small muted mt-2">Со стороны всё прилично, а внутри — постоянное чувство вины и усталость.</p>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20v-1a5 5 0 0 1 5-5h2"/><circle cx="9" cy="8" r="3.2"/><path d="M15 13l2.2 2.2L21 11"/></svg>
+            <div>
+              <p class="body ink-strong" style="font-weight:500">Вы выросли рядом с обесценивающим родителем</p>
+              <p class="small muted mt-2">И до сих пор ловите себя на том, что заранее угадываете чужое настроение.</p>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg>
+            <div>
+              <p class="body ink-strong" style="font-weight:500">После общения с человеком вас выжимает</p>
+              <p class="small muted mt-2">Разговор закончился час назад, а сил нет до конца дня.</p>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6.5v5c0 4.6 3.3 8.4 8 9.5 4.7-1.1 8-4.9 8-9.5v-5L12 3Z"/></svg>
+            <div>
+              <p class="body ink-strong" style="font-weight:500">Вы хотите отделить свою вину от чужой манипуляции</p>
+              <p class="small muted mt-2">Понять, где вы действительно неправы, а где вас в этом убедили.</p>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5Z"/></svg>
+            <div>
+              <p class="body ink-strong" style="font-weight:500">Вам нужен язык, чтобы это описать</p>
+              <p class="small muted mt-2">Когда происходящее не получается объяснить даже самому себе.</p>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M19 8v6M22 11h-6"/></svg>
+            <div>
+              <p class="body ink-strong" style="font-weight:500">Вы поддерживаете близкого</p>
+              <p class="small muted mt-2">И хотите помочь, не обесценивая его опыт и не решая за него.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <p class="eyebrow">Частые вопросы</p>
+        <h2 class="h2 mt-3">Коротко о главном</h2>
+        <div class="faq mt-9">
+          <details>
+            <summary>Можно ли поставить диагноз по статьям в интернете?</summary>
+            <div class="faq-body">Нет. Расстройство личности — это устойчивый паттерн, который проявляется годами, в разных сферах жизни и приводит к заметным страданиям или нарушению функционирования. Оценить это можно только очно, в динамике, с учётом истории жизни и исключения других состояний. Совпадение с описанием на сайте не означает ни диагноза, ни его отсутствия.</div>
+          </details>
+          <details>
+            <summary>Мой партнёр — нарцисс?</summary>
+            <div class="faq-body">На этот вопрос сайт отвечать не будет, и это осознанно. Гораздо продуктивнее другой: комфортно ли вам в этих отношениях, можете ли вы там злиться, ошибаться и не соглашаться — и что происходит, когда вы пробуете. Ответ на него доступен вам прямо сейчас, а на первый — нет.</div>
+          </details>
+          <details>
+            <summary>НРЛ лечится?</summary>
+            <div class="faq-body">Специфического препарата не существует, но психотерапия помогает: снижается импульсивность, растёт способность выдерживать критику и замечать чувства других. Главная сложность в том, что человек редко приходит за помощью из‑за самой грандиозности — обычно поводом становится депрессия, разрыв или профессиональный провал. Изменения возможны, но требуют долгой работы и собственного желания.</div>
+          </details>
+          <details>
+            <summary>Чем НРЛ отличается от обычного эгоизма?</summary>
+            <div class="faq-body">Масштабом и устойчивостью. Эгоистично повести себя может любой в трудный период. При расстройстве личности речь идёт о постоянном способе обходиться с собой и другими: он не меняется от ситуации к ситуации, воспроизводится в разных отношениях и сохраняется годами.</div>
+          </details>
+          <details>
+            <summary>Что если я узнаю в описании себя?</summary>
+            <div class="faq-body">Сама по себе эта тревога — хороший признак: людям с выраженным расстройством такое беспокойство обычно несвойственно. Нарциссические черты в той или иной степени есть у всех, и заметить их у себя — не приговор, а точка, с которой можно начать разговор со специалистом.</div>
+          </details>
+          <details>
+            <summary>Куда обращаться за помощью?</summary>
+            <div class="faq-body">К клиническому психологу или психотерапевту — очно или онлайн. Если речь идёт о переживании абьюза, ищите специалиста с опытом работы с травмой и насилием в отношениях. Если есть угрозы, преследование или физическое насилие — это уже не про границы, а про безопасность: нужна помощь извне, вплоть до полиции и кризисных центров.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <div class="callout-accent">
+          <h2 class="h3">Начните с первого раздела</h2>
+          <p class="small mt-3" style="max-width:44rem">Понимание устройства расстройства снимает половину вопросов к себе: становится видно, что дело не в том, что вы недостаточно старались или слишком много просили.</p>
+          <div class="mt-6" style="display:flex;flex-wrap:wrap;gap:12px">
+            <a href="chto-takoe-nrl.html" class="btn btn-primary">Что такое НРЛ</a>
+            <a href="manipulyacii.html" class="btn btn-secondary">Сразу к манипуляциям</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
 </main>
+
+<footer class="site-footer">
+  <div class="inner">
+    <div class="footer-grid">
+      <div style="max-width:24rem">
+        <div class="brand"><span class="brand-mark" aria-hidden="true">Н</span> Про НРЛ</div>
+        <p class="small muted mt-3">Просветительский материал о нарциссическом расстройстве личности и о том, как выстраивать границы рядом с человеком с нарциссическими чертами.</p>
+        <p class="caption muted-soft mt-3">Сайт не является медицинским сервисом и не ставит диагнозы. Диагноз может поставить только врач‑психиатр или клинический психолог на очной консультации.</p>
+      </div>
+      <nav aria-label="Разделы">
+        <h3 class="eyebrow">Разделы</h3>
+        <ul>
+          <li><a href="chto-takoe-nrl.html">Что такое НРЛ</a></li>
+          <li><a href="nrl-i-travma.html">НРЛ и нарциссическая травма</a></li>
+          <li><a href="mozg.html">Мозг при НРЛ</a></li>
+          <li><a href="empat-i-narciss.html">Эмпат и нарцисс</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Практика">
+        <h3 class="eyebrow">Практика</h3>
+        <ul>
+          <li><a href="kak-sohranit-energiyu.html">Как сохранить энергию</a></li>
+          <li><a href="manipulyacii.html">Манипуляции</a></li>
+          <li><a href="zashchita.html">Как оградить себя</a></li>
+          <li><a href="index.html">На главную</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
